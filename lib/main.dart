@@ -4,19 +4,15 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-        ),
-        child: Center(
-          // textDirectionを指定しないと、MaterialApp以外の場合にエラーになるらしい
-          child: Text(
-            "Hello, world!!!",
-            textDirection: TextDirection.ltr,
-            style: TextStyle(
-              fontSize: 48,
-              color: Colors.black,
-            ),
+  Widget build(BuildContext context) => MaterialApp(
+        home: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Image.asset("images/image01.png"),
+              Image.asset("images/image02.png"),
+              Image.asset("images/image03.png"),
+            ],
           ),
         ),
       );
