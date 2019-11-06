@@ -4,14 +4,8 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        title: 'Flutter layout demo',
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('Flutter layout demo title!'),
-            ),
-            body: Center(
-              child: Text("Hello, world!!"),
-            )),
+  Widget build(BuildContext context) => Center(
+        // textDirectionを指定しないと、MaterialApp以外の場合にエラーになるらしい
+        child: Text("Hello, world!!!", textDirection: TextDirection.ltr),
       );
 }
