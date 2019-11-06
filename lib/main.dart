@@ -5,15 +5,21 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
-        home: Center(
+          home: Scaffold(
+        body: Center(
           child: Row(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Image.asset("images/image01.png"),
-              Image.asset("images/image02.png"),
-              Image.asset("images/image03.png"),
+              Icon(Icons.star, color: Colors.green[500]),
+              Icon(Icons.star, color: Colors.green[500]),
+              Icon(Icons.star, color: Colors.green[500]),
+              Icon(Icons.star, color: Colors.green[500]),
+              Icon(Icons.star, color: Colors.black),
+              Icon(Icons.star, color: Colors.black),
+              Icon(Icons.star, color: Colors.black),
             ],
           ),
         ),
-      );
+      ));
 }
